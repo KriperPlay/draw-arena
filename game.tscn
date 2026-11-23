@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://be6xw6qa720g7"]
+
+[ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_feb5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc0e3"]
+size = Vector2(157, 156)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_e2o6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(452, 726)
+scale = Vector2(0.328125, 0.328125)
+texture = ExtResource("2_feb5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(453.5, 723)
+shape = SubResource("RectangleShape2D_fc0e3")
