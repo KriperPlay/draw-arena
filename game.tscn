@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkk8jlhv8co84"]
+[gd_scene load_steps=13 format=3 uid="uid://bkk8jlhv8co84"]
 
 [ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://c3tf3dgtyoecl" path="res://marker_assets/environment/grass_01.png" id="2_e2o6t"]
@@ -11,6 +11,18 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
 size = Vector2(142.99998, 5751)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryrav"]
+size = Vector2(161, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eow3j"]
+size = Vector2(414.3262, 196.9231)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5wjh"]
+size = Vector2(158.52875, 176.63647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vef74"]
+size = Vector2(414.73853, 318.82788)
 
 [node name="Node2D" type="Node2D"]
 
@@ -132,54 +144,69 @@ position = Vector2(-553, -1103.5)
 scale = Vector2(0.44140628, 0.42382815)
 texture = ExtResource("2_e2o6t")
 
-[node name="Grass02" type="Sprite2D" parent="."]
+[node name="Grass02" type="Sprite2D" parent="Grass01"]
 texture_filter = 1
-position = Vector2(-545, 743.9999)
-scale = Vector2(0.44140628, 0.42382815)
+position = Vector2(18.12378, 4359.0776)
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_e2o6t")
 
-[node name="Grass03" type="Sprite2D" parent="."]
+[node name="Grass03" type="Sprite2D" parent="Grass01"]
 texture_filter = 1
-position = Vector2(301.0606, -835.9927)
-scale = Vector2(0.38648218, 0.39450276)
+position = Vector2(1934.8627, 631.1692)
+scale = Vector2(0.8755702, 0.93080825)
 texture = ExtResource("2_e2o6t")
 
-[node name="Rock01" type="Sprite2D" parent="."]
+[node name="Grass04" type="Sprite2D" parent="Grass01"]
+position = Vector2(7559.928, 1402.1012)
+scale = Vector2(3.309735, 3.064516)
+texture = ExtResource("6_j5wjh")
+
+[node name="Grass05" type="Sprite2D" parent="Grass01"]
+position = Vector2(6241.415, 4922.9854)
+scale = Vector2(1.8185838, 1.737327)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass06" type="Sprite2D" parent="Grass01"]
+position = Vector2(910.7256, 9759.852)
+scale = Vector2(1.8185838, 1.737327)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass07" type="Sprite2D" parent="Grass01"]
 texture_filter = 1
-position = Vector2(590, 1390)
-scale = Vector2(0.5449219, 0.5332031)
-texture = ExtResource("3_feb5d")
+position = Vector2(3765.2385, 3969.7695)
+scale = Vector2(1.823009, 1.7626733)
+texture = ExtResource("2_e2o6t")
 
 [node name="player" parent="." instance=ExtResource("1_80nbo")]
 position = Vector2(-592, 79)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="wall" type="StaticBody2D" parent="."]
 position = Vector2(-1157.59, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 position = Vector2(1.0899658, 1011.5)
 shape = SubResource("RectangleShape2D_feb5d")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="wall1" type="StaticBody2D" parent="."]
 position = Vector2(-1509.59, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall1"]
 position = Vector2(4870.59, 1001)
 shape = SubResource("RectangleShape2D_feb5d")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="wall2" type="StaticBody2D" parent="."]
 position = Vector2(2245, -945.99994)
 rotation = 1.5681105
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
 position = Vector2(4870.59, 1001)
 shape = SubResource("RectangleShape2D_feb5d")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="wall3" type="StaticBody2D" parent="."]
 position = Vector2(1843.9998, -6791.999)
 rotation = 1.5681105
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
 position = Vector2(4870.59, 1001)
 shape = SubResource("RectangleShape2D_feb5d")
 
@@ -187,22 +214,65 @@ shape = SubResource("RectangleShape2D_feb5d")
 position = Vector2(2378, 2375)
 texture = ExtResource("4_ryrav")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock03"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock03/StaticBody2D"]
+position = Vector2(-4.5, 1)
+shape = SubResource("RectangleShape2D_ryrav")
+
 [node name="Rock02" type="Sprite2D" parent="."]
 position = Vector2(631.5, 2982)
 scale = Vector2(0.6347656, 0.76171875)
 texture = ExtResource("5_eow3j")
 
-[node name="Grass04" type="Sprite2D" parent="."]
-position = Vector2(2784, -509.25)
-scale = Vector2(1.4609379, 1.2988282)
-texture = ExtResource("6_j5wjh")
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock02"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock02/StaticBody2D"]
+position = Vector2(-1.5753784, 78.76929)
+shape = SubResource("RectangleShape2D_eow3j")
 
 [node name="Rock04" type="Sprite2D" parent="."]
 position = Vector2(1635, -658)
 scale = Vector2(2.71875, 2.8476563)
 texture = ExtResource("4_ryrav")
 
-[node name="Grass05" type="Sprite2D" parent="."]
-position = Vector2(2202, 983)
-scale = Vector2(0.8027344, 0.7363281)
-texture = ExtResource("2_e2o6t")
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock04"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock04/StaticBody2D"]
+position = Vector2(-2.390808, 0.8779144)
+shape = SubResource("RectangleShape2D_j5wjh")
+
+[node name="Rock01" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(590, 1390)
+scale = Vector2(0.5449219, 0.5332031)
+texture = ExtResource("3_feb5d")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock01"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock01/StaticBody2D"]
+position = Vector2(-1.8349609, 24.38086)
+shape = SubResource("RectangleShape2D_vef74")
+
+[node name="Rock05" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2722, 399)
+scale = Vector2(0.5449219, 0.5332031)
+texture = ExtResource("3_feb5d")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock05"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock05/StaticBody2D"]
+position = Vector2(-1.8349609, 24.38086)
+shape = SubResource("RectangleShape2D_vef74")
+
+[node name="Rock06" type="Sprite2D" parent="."]
+position = Vector2(2653, 3476)
+scale = Vector2(2.71875, 2.8476563)
+texture = ExtResource("4_ryrav")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rock06"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock06/StaticBody2D"]
+position = Vector2(-2.390808, 0.8779144)
+shape = SubResource("RectangleShape2D_j5wjh")
