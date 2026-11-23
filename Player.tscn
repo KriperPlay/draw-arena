@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=10 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="AudioStream" uid="uid://cif22ypbxta2r" path="res://addons/Hp.mp3" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_kne1u"]
 [ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="3_kne1u"]
-[ext_resource type="Texture2D" uid="uid://di55o57kaisf8" path="res://addons/pause.png" id="4_cxr5p"]
+[ext_resource type="Texture2D" uid="uid://dw32115mkaa45" path="res://addons/pause2.png" id="4_cxr5p"]
+[ext_resource type="Texture2D" uid="uid://di55o57kaisf8" path="res://addons/pause.png" id="5_tdg3f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
 size = Vector2(157, 156)
@@ -55,11 +56,12 @@ mouse_filter = 2
 
 [node name="Pause_Button" type="TextureButton" parent="CharacterBody2D/Camera2D/CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 918.0
-offset_top = -6.0
-offset_right = 1036.0
-offset_bottom = 112.0
+offset_left = 880.0
+offset_top = -13.0
+offset_right = 1019.0
+offset_bottom = 126.0
 texture_normal = ExtResource("4_cxr5p")
+texture_pressed = ExtResource("5_tdg3f")
 ignore_texture_size = true
 stretch_mode = 0
 
