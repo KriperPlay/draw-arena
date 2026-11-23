@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=6 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_kne1u"]
+[ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="3_kne1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
 size = Vector2(157, 156)
@@ -50,6 +51,7 @@ offset_left = 39.0
 offset_top = 6.0
 offset_right = 276.0
 offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("3_kne1u")
 text = "100"
 label_settings = SubResource("LabelSettings_kpjcp")
 horizontal_alignment = 1
