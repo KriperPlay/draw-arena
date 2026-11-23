@@ -7,7 +7,7 @@
 [node name="About_Game" type="Node2D"]
 script = ExtResource("1_u7lq8")
 
-[node name="МинималистичнаяРамкаНаКремовомФоне" type="Sprite2D" parent="."]
+[node name="bg" type="Sprite2D" parent="."]
 position = Vector2(546.25, 972)
 scale = Vector2(1.1578108, 1.1590909)
 texture = ExtResource("1_ij6qp")
@@ -47,3 +47,4 @@ text = ">>>>"
 flat = true
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="continue" to="." method="_on_continue_pressed"]
