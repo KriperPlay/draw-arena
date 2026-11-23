@@ -22,6 +22,13 @@ func takeDamage(damage: int):
 func _pause():
 	get_tree().paused = !get_tree().paused
 
+func _ready() -> void:
+	add_to_group("PLAYER")
+
+func get_my_pos() -> Vector2:
+	return global_position
+
+
 func _physics_process(delta: float) -> void:
 	#takeDamage(10)
 	
