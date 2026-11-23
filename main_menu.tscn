@@ -1,26 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://wypu0br2vri4"]
+[gd_scene load_steps=5 format=3 uid="uid://wypu0br2vri4"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="FontFile" uid="uid://wririuoxh701" path="res://NotABug-Regular.ttf" id="2_7vrkn"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_fu7sn"]
-font = ExtResource("2_7vrkn")
-font_size = 136
+[ext_resource type="Script" uid="uid://b81a3pd7npkup" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://x8mshcf4yn24" path="res://marker_assets/ui/main_menu_bg.svg" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://co6peu6vrm81a" path="res://marker_assets/ui/btn_play.png" id="3_jix8l"]
+[ext_resource type="Texture2D" uid="uid://colmbjyy4xu7b" path="res://marker_assets/ui/btn_settings.png" id="4_jix8l"]
 
 [node name="main-menu" type="Node2D"]
 script = ExtResource("1_06t4h")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 261.0
-offset_top = 212.0
-offset_right = 493.0
-offset_bottom = 590.0
+[node name="MainMenuBg" type="Sprite2D" parent="."]
+position = Vector2(532, 952)
+texture = ExtResource("3_fu7sn")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 175.0
-offset_top = 1061.0
-offset_right = 987.0
-offset_bottom = 1477.0
-text = "Penis
-1488"
-label_settings = SubResource("LabelSettings_fu7sn")
+[node name="play" type="Button" parent="."]
+offset_left = 90.0
+offset_top = 858.0
+offset_right = 998.0
+offset_bottom = 1116.0
+localize_numeral_system = false
+icon = ExtResource("3_jix8l")
+flat = true
+
+[node name="settings" type="Button" parent="."]
+visible = false
+offset_left = 81.0
+offset_top = 1021.0
+offset_right = 989.0
+offset_bottom = 1279.0
+icon = ExtResource("4_jix8l")
+flat = true

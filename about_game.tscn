@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://eraa1yc1vv61"]
+
+[ext_resource type="Texture2D" uid="uid://dkxxq2ul6rme6" path="res://marker_assets/ui/Минималистичная рамка на кремовом фоне.png" id="1_ij6qp"]
+[ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="2_0428m"]
+
+[node name="About_Game" type="Node2D"]
+
+[node name="МинималистичнаяРамкаНаКремовомФоне" type="Sprite2D" parent="."]
+position = Vector2(546.25, 972)
+scale = Vector2(1.1578108, 1.1590909)
+texture = ExtResource("1_ij6qp")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 111.0
+offset_top = 137.0
+offset_right = 1030.0
+offset_bottom = 1822.0
+theme_override_fonts/font = ExtResource("2_0428m")
+theme_override_font_sizes/font_size = 100
+text = "тут напишем описание игры"
+horizontal_alignment = 3
+autowrap_mode = 1
