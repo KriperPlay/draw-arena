@@ -16,8 +16,8 @@ script = ExtResource("1_4gyqm")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 21.81
-target_desired_distance = 5.0
-path_max_distance = 107.0
+target_desired_distance = 21.81
+path_max_distance = 344.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.38476563, 0.38476563)
