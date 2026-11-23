@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=7 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_kne1u"]
@@ -11,6 +11,9 @@ size = Vector2(157, 156)
 font_size = 56
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kne1u"]
+font_size = 20
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,3 +59,111 @@ text = "100"
 label_settings = SubResource("LabelSettings_kpjcp")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SpeedBoard" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 332.0
+offset_top = 24.0
+offset_right = 533.0205
+offset_bottom = 90.12517
+scale = Vector2(0.7561417, 0.7561417)
+color = Color(0, 0, 0, 1)
+
+[node name="Speed" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 333.0
+offset_top = 25.0
+offset_right = 531.3755
+offset_bottom = 89.0
+scale = Vector2(0.7561417, 0.7561417)
+color = Color(0.562361, 0.6286346, 1, 1)
+
+[node name="Speedvalue" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 321.0
+offset_top = 19.0
+offset_right = 558.0
+offset_bottom = 98.0
+scale = Vector2(0.7561417, 0.7561417)
+theme_override_fonts/font = ExtResource("3_kne1u")
+text = "100"
+label_settings = SubResource("LabelSettings_kpjcp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Speed_Label" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 355.0
+offset_top = -2.0
+offset_right = 464.0
+offset_bottom = 26.0
+text = "Ускорение"
+label_settings = SubResource("LabelSettings_kne1u")
+
+[node name="DefenceBoard2" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 493.0
+offset_top = 24.0
+offset_right = 694.0205
+offset_bottom = 90.12517
+scale = Vector2(0.7561417, 0.7561417)
+color = Color(0, 0, 0, 1)
+
+[node name="Defence" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 494.0
+offset_top = 25.0
+offset_right = 692.3755
+offset_bottom = 89.0
+scale = Vector2(0.7561417, 0.7561417)
+color = Color(0.30266085, 0.76546913, 0.4727965, 1)
+
+[node name="Defencevalue" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 482.0
+offset_top = 19.0
+offset_right = 719.0
+offset_bottom = 98.0
+scale = Vector2(0.7561417, 0.7561417)
+theme_override_fonts/font = ExtResource("3_kne1u")
+text = "100"
+label_settings = SubResource("LabelSettings_kpjcp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Defence_Label" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 530.0
+offset_top = -2.0
+offset_right = 610.0
+offset_bottom = 26.0
+text = "Защита"
+label_settings = SubResource("LabelSettings_kne1u")
+
+[node name="AttackBoard" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 654.0
+offset_top = 24.0
+offset_right = 855.0205
+offset_bottom = 90.12517
+scale = Vector2(0.7561417, 0.7561417)
+color = Color(0, 0, 0, 1)
+
+[node name="Attack" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 655.0
+offset_top = 25.0
+offset_right = 853.3755
+offset_bottom = 89.0
+scale = Vector2(0.7561417, 0.7561417)
+color = Color(0.94235533, 0.5309, 0.4013579, 1)
+
+[node name="Attackvalue" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 643.0
+offset_top = 19.0
+offset_right = 880.0
+offset_bottom = 98.0
+scale = Vector2(0.7561417, 0.7561417)
+theme_override_fonts/font = ExtResource("3_kne1u")
+text = "100"
+label_settings = SubResource("LabelSettings_kpjcp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Attack_Label" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 699.0
+offset_top = -2.0
+offset_right = 779.0
+offset_bottom = 26.0
+text = "Атака"
+label_settings = SubResource("LabelSettings_kne1u")
