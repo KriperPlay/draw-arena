@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=8 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
+[ext_resource type="AudioStream" uid="uid://cif22ypbxta2r" path="res://addons/Hp.mp3" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_kne1u"]
 [ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="3_kne1u"]
 
@@ -22,6 +23,10 @@ outline_color = Color(0, 0, 0, 1)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(505, 901)
 script = ExtResource("1_kpjcp")
+
+[node name="Hp" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("2_e80uo")
+volume_db = -4.992
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 scale = Vector2(0.328125, 0.328125)
