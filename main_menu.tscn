@@ -29,3 +29,5 @@ offset_right = 989.0
 offset_bottom = 1279.0
 icon = ExtResource("4_jix8l")
 flat = true
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
