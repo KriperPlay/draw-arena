@@ -4,7 +4,7 @@
 
 [node name="paint-player" type="Node2D"]
 
-[node name="МинималистичнаяРамкаНаКремовомФоне" type="Sprite2D" parent="."]
+[node name="bg" type="Sprite2D" parent="."]
 position = Vector2(538.75, 963.5)
 scale = Vector2(1.1376195, 1.1656698)
 texture = ExtResource("1_nkhuf")

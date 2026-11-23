@@ -1,13 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://bkk8jlhv8co84"]
 
 [ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://dvdrvg08vlga5" path="res://marker_assets/grass-bg.png" id="1_eow3j"]
 [ext_resource type="Texture2D" uid="uid://c3tf3dgtyoecl" path="res://marker_assets/environment/grass_01.png" id="2_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://yy6fa7dp4i5j" path="res://marker_assets/environment/rock_01.png" id="3_feb5d"]
 [ext_resource type="Texture2D" uid="uid://cb0ijq1ll0eon" path="res://marker_assets/environment/rock_03.svg" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://e7d16u6hycn5" path="res://marker_assets/environment/rock_02.png" id="5_eow3j"]
 [ext_resource type="Texture2D" uid="uid://bs7gv66if0c4e" path="res://marker_assets/environment/grass_03.svg" id="6_j5wjh"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_mwb40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
 size = Vector2(142.99998, 5751)
@@ -27,116 +26,102 @@ size = Vector2(414.73853, 318.82788)
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_right = 1091.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_top = -1859.0
 offset_right = 2182.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_top = -1859.0
 offset_right = 1091.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect2" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_top = 1928.0
 offset_right = 1091.0
 offset_bottom = 3856.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect2"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect2/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect2/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_top = -1859.0
 offset_right = 2182.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect2"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_top = -1859.0
 offset_right = 1091.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect4" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = -1084.0
 offset_top = 1928.0
 offset_right = 7.0
 offset_bottom = 3856.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_left = -1084.0
 offset_right = 7.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_left = 1091.0
 offset_top = -1859.0
 offset_right = 2182.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect4" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_left = -1085.0
 offset_top = -1859.0
 offset_right = 6.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="Grass01" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -162,8 +147,8 @@ scale = Vector2(3.309735, 3.064516)
 texture = ExtResource("6_j5wjh")
 
 [node name="Grass05" type="Sprite2D" parent="Grass01"]
-position = Vector2(6241.415, 4922.9854)
-scale = Vector2(1.8185838, 1.737327)
+position = Vector2(6200.6367, 4998.4883)
+scale = Vector2(1.1570809, 1.1589869)
 texture = ExtResource("2_e2o6t")
 
 [node name="Grass06" type="Sprite2D" parent="Grass01"]
@@ -171,14 +156,234 @@ position = Vector2(910.7256, 9759.852)
 scale = Vector2(1.8185838, 1.737327)
 texture = ExtResource("2_e2o6t")
 
+[node name="Grass08" type="Sprite2D" parent="Grass01"]
+position = Vector2(5876.6724, 5359.483)
+scale = Vector2(1.1570809, 1.1589869)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass09" type="Sprite2D" parent="Grass01"]
+position = Vector2(6393.203, 5387.797)
+scale = Vector2(1.1570809, 1.1589869)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass10" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(4066.5483, 4120.7744)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass11" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(3350.6545, 4236.3867)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
 [node name="Grass07" type="Sprite2D" parent="Grass01"]
 texture_filter = 1
-position = Vector2(3765.2385, 3969.7695)
-scale = Vector2(1.823009, 1.7626733)
+position = Vector2(3642.902, 3860.9395)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass12" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(6703.575, 2689.1807)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass13" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(5987.681, 2804.793)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass14" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(6279.9287, 2429.3457)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass15" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(373.80566, 770.95044)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass16" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(-342.08813, 886.56274)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass17" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(-49.840088, 511.11548)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass10" type="Sprite2D" parent="Grass01/Grass17"]
+texture_filter = 1
+position = Vector2(4630.7715, -736.84424)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass11" type="Sprite2D" parent="Grass01/Grass17"]
+texture_filter = 1
+position = Vector2(3914.8777, -621.23193)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass07" type="Sprite2D" parent="Grass01/Grass17"]
+texture_filter = 1
+position = Vector2(4207.125, -996.6792)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass10" type="Sprite2D" parent="Grass01/Grass17/Grass07"]
+texture_filter = 1
+position = Vector2(-194.8222, 4756.846)
+scale = Vector2(0.8344737, 0.8448151)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass11" type="Sprite2D" parent="Grass01/Grass17/Grass07"]
+texture_filter = 1
+position = Vector2(-204.06628, 4982.3506)
+scale = Vector2(0.69206345, 0.7091633)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass07" type="Sprite2D" parent="Grass01/Grass17/Grass07"]
+texture_filter = 1
+position = Vector2(-459.82507, 4865.816)
+scale = Vector2(0.80569196, 0.7193604)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass18" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(389.66406, 9269.677)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass19" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(-326.22974, 9385.289)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass20" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(-33.98169, 9009.842)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass21" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(8130.831, 9656.626)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass22" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(7414.9375, 9772.238)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass23" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(7707.1846, 9396.791)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass24" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(2727.646, 1221.6045)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass25" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(2011.7523, 1337.2168)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass26" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(2304, 961.7695)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass27" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(3083.3276, 9564.607)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass28" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(2367.4336, 9680.22)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass29" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(2659.6814, 9304.772)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass30" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(1506.5488, 6995.1704)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass31" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(790.655, 7110.7827)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass32" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(1082.9028, 6735.3354)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass33" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(1825.9824, 7231.115)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass34" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(1110.0886, 7346.7275)
+scale = Vector2(1.3451337, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass35" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(1402.3364, 6971.2803)
+scale = Vector2(1.3451335, 1.3375573)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass36" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(242.40707, 4682.3223)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass37" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(-79.292, 4743.668)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass38" type="Sprite2D" parent="Grass01"]
+texture_filter = 1
+position = Vector2(570.9026, 5083.428)
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_e2o6t")
 
 [node name="player" parent="." instance=ExtResource("1_80nbo")]
-position = Vector2(-592, 79)
+position = Vector2(-396, 258)
 
 [node name="wall" type="StaticBody2D" parent="."]
 position = Vector2(-1157.59, 0)
