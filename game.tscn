@@ -389,7 +389,7 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_e2o6t")
 
 [node name="player" parent="." instance=ExtResource("1_80nbo")]
-position = Vector2(-390, 247)
+position = Vector2(478, 1685)
 
 [node name="Node2D" parent="." instance=ExtResource("8_j5wjh")]
 position = Vector2(-91, -306)
@@ -495,3 +495,6 @@ texture = ExtResource("4_ryrav")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Rock06/StaticBody2D"]
 position = Vector2(-2.390808, 0.8779144)
 shape = SubResource("RectangleShape2D_j5wjh")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_j5wjh")]
+position = Vector2(1288, -226)

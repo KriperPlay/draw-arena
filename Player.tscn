@@ -201,6 +201,4 @@ theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Атака"
 label_settings = SubResource("LabelSettings_kne1u")
 
-[node name="Node2D" type="Node2D" parent="."]
-
 [connection signal="pressed" from="Camera2D/CanvasLayer/Control/Pause_Button" to="." method="_pause"]

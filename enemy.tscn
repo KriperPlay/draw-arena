@@ -15,26 +15,21 @@ motion_mode = 1
 script = ExtResource("1_4gyqm")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 5.0
+path_desired_distance = 21.81
 target_desired_distance = 5.0
-path_max_distance = 20.0
+path_max_distance = 107.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(559, 958)
 scale = Vector2(0.38476563, 0.38476563)
 texture = ExtResource("1_7k104")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(559, 963)
 shape = SubResource("CapsuleShape2D_4gyqm")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(563, 962)
 shape = SubResource("CircleShape2D_7k104")
-
-[node name="Node2D" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="." method="_hitbox_enter"]
 [connection signal="body_exited" from="Area2D" to="." method="_hitbox_exited"]
