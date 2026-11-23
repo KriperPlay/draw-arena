@@ -1,11 +1,208 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkk8jlhv8co84"]
+[gd_scene load_steps=9 format=3 uid="uid://bkk8jlhv8co84"]
 
-[ext_resource type="Texture2D" uid="uid://dbr5hm8udg4cg" path="res://marker_assets/ui/main_menu_1080x1920.png" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://c3tf3dgtyoecl" path="res://marker_assets/environment/grass_01.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://yy6fa7dp4i5j" path="res://marker_assets/environment/rock_01.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://cb0ijq1ll0eon" path="res://marker_assets/environment/rock_03.svg" id="4_ryrav"]
+[ext_resource type="Texture2D" uid="uid://e7d16u6hycn5" path="res://marker_assets/environment/rock_02.png" id="5_eow3j"]
+[ext_resource type="Texture2D" uid="uid://bs7gv66if0c4e" path="res://marker_assets/environment/grass_03.svg" id="6_j5wjh"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mwb40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
+size = Vector2(142.99998, 5751)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(630.9999, 915.25006)
-scale = Vector2(4.3999996, 1.351823)
-texture = ExtResource("1_80nbo")
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+offset_right = 1091.0
+offset_bottom = 1928.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = 1091.0
+offset_right = 2182.0
+offset_bottom = 1928.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = 1091.0
+offset_right = 2182.0
+offset_bottom = 1928.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = 1091.0
+offset_top = -1859.0
+offset_right = 2182.0
+offset_bottom = 69.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_top = -1859.0
+offset_right = 1091.0
+offset_bottom = 69.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_top = 1928.0
+offset_right = 1091.0
+offset_bottom = 3856.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect2"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = 1091.0
+offset_right = 2182.0
+offset_bottom = 1928.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect2/TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = 1091.0
+offset_right = 2182.0
+offset_bottom = 1928.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect2/TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = 1091.0
+offset_top = -1859.0
+offset_right = 2182.0
+offset_bottom = 69.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect2"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_top = -1859.0
+offset_right = 1091.0
+offset_bottom = 69.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect"]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+layout_mode = 0
+offset_left = -1084.0
+offset_top = 1928.0
+offset_right = 7.0
+offset_bottom = 3856.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+offset_left = -1084.0
+offset_right = 7.0
+offset_bottom = 1928.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+offset_left = 1091.0
+offset_top = -1859.0
+offset_right = 2182.0
+offset_bottom = 69.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
+offset_left = -1085.0
+offset_top = -1859.0
+offset_right = 6.0
+offset_bottom = 69.0
+texture = SubResource("CanvasTexture_mwb40")
+
+[node name="Grass01" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-553, -1103.5)
+scale = Vector2(0.44140628, 0.42382815)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass02" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-545, 743.9999)
+scale = Vector2(0.44140628, 0.42382815)
+texture = ExtResource("2_e2o6t")
+
+[node name="Grass03" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(301.0606, -835.9927)
+scale = Vector2(0.38648218, 0.39450276)
+texture = ExtResource("2_e2o6t")
+
+[node name="Rock01" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(590, 1390)
+scale = Vector2(0.5449219, 0.5332031)
+texture = ExtResource("3_feb5d")
+
+[node name="player" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(-592, 79)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1157.59, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.0899658, 1011.5)
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-1509.59, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(4870.59, 1001)
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(2245, -945.99994)
+rotation = 1.5681105
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(4870.59, 1001)
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(1843.9998, -6791.999)
+rotation = 1.5681105
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(4870.59, 1001)
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="Rock03" type="Sprite2D" parent="."]
+position = Vector2(2378, 2375)
+texture = ExtResource("4_ryrav")
+
+[node name="Rock02" type="Sprite2D" parent="."]
+position = Vector2(631.5, 2982)
+scale = Vector2(0.6347656, 0.76171875)
+texture = ExtResource("5_eow3j")
+
+[node name="Grass04" type="Sprite2D" parent="."]
+position = Vector2(2784, -509.25)
+scale = Vector2(1.4609379, 1.2988282)
+texture = ExtResource("6_j5wjh")
+
+[node name="Rock04" type="Sprite2D" parent="."]
+position = Vector2(1635, -658)
+scale = Vector2(2.71875, 2.8476563)
+texture = ExtResource("4_ryrav")
+
+[node name="Grass05" type="Sprite2D" parent="."]
+position = Vector2(2202, 983)
+scale = Vector2(0.8027344, 0.7363281)
+texture = ExtResource("2_e2o6t")

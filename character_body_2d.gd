@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var Hp: int = 100
 
-const SPEED = 300.0
+const SPEED = 600.0
 const JUMP_VELOCITY = -400.0
 var dvizh: bool = false
 
