@@ -14,6 +14,8 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kne1u"]
 font_size = 20
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -90,9 +92,10 @@ vertical_alignment = 1
 
 [node name="Speed_Label" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
 offset_left = 355.0
-offset_top = -2.0
+offset_top = -4.0
 offset_right = 464.0
-offset_bottom = 26.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Ускорение"
 label_settings = SubResource("LabelSettings_kne1u")
 
@@ -126,9 +129,10 @@ vertical_alignment = 1
 
 [node name="Defence_Label" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
 offset_left = 530.0
-offset_top = -2.0
+offset_top = -3.0
 offset_right = 610.0
 offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Защита"
 label_settings = SubResource("LabelSettings_kne1u")
 
@@ -165,5 +169,7 @@ offset_left = 699.0
 offset_top = -2.0
 offset_right = 779.0
 offset_bottom = 26.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Атака"
 label_settings = SubResource("LabelSettings_kne1u")

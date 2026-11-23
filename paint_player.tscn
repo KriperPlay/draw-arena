@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://coyt4ovnbiqgk"]
+
+[ext_resource type="Texture2D" uid="uid://dkxxq2ul6rme6" path="res://marker_assets/ui/Минималистичная рамка на кремовом фоне.png" id="1_nkhuf"]
+
+[node name="paint-player" type="Node2D"]
+
+[node name="МинималистичнаяРамкаНаКремовомФоне" type="Sprite2D" parent="."]
+position = Vector2(538.75, 963.5)
+scale = Vector2(1.1376195, 1.1656698)
+texture = ExtResource("1_nkhuf")
