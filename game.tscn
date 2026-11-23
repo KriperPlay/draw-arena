@@ -1,21 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkk8jlhv8co84"]
+[gd_scene load_steps=2 format=3 uid="uid://bkk8jlhv8co84"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_feb5d"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc0e3"]
-size = Vector2(157, 156)
+[ext_resource type="Texture2D" uid="uid://dbr5hm8udg4cg" path="res://marker_assets/ui/main_menu_1080x1920.png" id="1_80nbo"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_e2o6t")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-scale = Vector2(0.328125, 0.328125)
-texture = ExtResource("2_feb5d")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_fc0e3")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(630.9999, 915.25006)
+scale = Vector2(4.3999996, 1.351823)
+texture = ExtResource("1_80nbo")
