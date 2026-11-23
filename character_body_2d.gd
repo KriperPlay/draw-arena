@@ -19,6 +19,9 @@ func _takeDamage(damage: int):
 		await get_tree().create_timer(0.69).timeout
 		tm = true
 
+func _pause():
+	get_tree().paused = !get_tree().paused
+
 func _physics_process(delta: float) -> void:
 	#_takeDamage(10)
 	

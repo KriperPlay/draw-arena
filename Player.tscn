@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=9 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="AudioStream" uid="uid://cif22ypbxta2r" path="res://addons/Hp.mp3" id="2_e80uo"]
 [ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_kne1u"]
 [ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="3_kne1u"]
+[ext_resource type="Texture2D" uid="uid://di55o57kaisf8" path="res://addons/pause.png" id="4_cxr5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
 size = Vector2(157, 156)
@@ -41,6 +42,26 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D/Camera2D"]
+
+[node name="Control" type="Control" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Pause_Button" type="TextureButton" parent="CharacterBody2D/Camera2D/CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 918.0
+offset_top = -6.0
+offset_right = 1036.0
+offset_bottom = 112.0
+texture_normal = ExtResource("4_cxr5p")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="HealthBarFull" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
 offset_left = 10.0
@@ -178,3 +199,5 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Атака"
 label_settings = SubResource("LabelSettings_kne1u")
+
+[connection signal="pressed" from="CharacterBody2D/Camera2D/CanvasLayer/Control/Pause_Button" to="CharacterBody2D" method="_pause"]
