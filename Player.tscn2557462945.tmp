@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cok4nrmbcj7cg"]
+
+[ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://dr8xkm4ri4p8l" path="res://marker_assets/enemies/enemy_03_spiky.png" id="2_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
+size = Vector2(157, 156)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kpjcp"]
+font_size = 56
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(505, 901)
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.328125, 0.328125)
+texture = ExtResource("2_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_e80uo")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(0, -7)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CharacterBody2D/Camera2D"]
+
+[node name="HealthBarFull" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 312.0
+offset_bottom = 77.0
+color = Color(0, 0, 0, 1)
+
+[node name="HealthBar" type="ColorRect" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 311.0
+offset_bottom = 76.0
+color = Color(1, 0.4745098, 0.4745098, 1)
+
+[node name="Label" type="Label" parent="CharacterBody2D/Camera2D/CanvasLayer"]
+offset_left = 39.0
+offset_top = 6.0
+offset_right = 276.0
+offset_bottom = 83.0
+text = "100"
+label_settings = SubResource("LabelSettings_kpjcp")
+horizontal_alignment = 1
+vertical_alignment = 1
