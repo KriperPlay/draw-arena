@@ -1,13 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://bkk8jlhv8co84"]
 
 [ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://dvdrvg08vlga5" path="res://marker_assets/grass-bg.png" id="1_eow3j"]
 [ext_resource type="Texture2D" uid="uid://c3tf3dgtyoecl" path="res://marker_assets/environment/grass_01.png" id="2_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://yy6fa7dp4i5j" path="res://marker_assets/environment/rock_01.png" id="3_feb5d"]
 [ext_resource type="Texture2D" uid="uid://cb0ijq1ll0eon" path="res://marker_assets/environment/rock_03.svg" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://e7d16u6hycn5" path="res://marker_assets/environment/rock_02.png" id="5_eow3j"]
 [ext_resource type="Texture2D" uid="uid://bs7gv66if0c4e" path="res://marker_assets/environment/grass_03.svg" id="6_j5wjh"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_mwb40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
 size = Vector2(142.99998, 5751)
@@ -27,116 +26,102 @@ size = Vector2(414.73853, 318.82788)
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_right = 1091.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_top = -1859.0
 offset_right = 2182.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_top = -1859.0
 offset_right = 1091.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect2" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_top = 1928.0
 offset_right = 1091.0
 offset_bottom = 3856.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect2"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect2/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_right = 2182.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect2/TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = 1091.0
 offset_top = -1859.0
 offset_right = 2182.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/TextureRect2"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_top = -1859.0
 offset_right = 1091.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect4" type="TextureRect" parent="TextureRect"]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 layout_mode = 0
 offset_left = -1084.0
 offset_top = 1928.0
 offset_right = 7.0
 offset_bottom = 3856.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_left = -1084.0
 offset_right = 7.0
 offset_bottom = 1928.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_left = 1091.0
 offset_top = -1859.0
 offset_right = 2182.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="TextureRect4" type="TextureRect" parent="."]
-modulate = Color(0.7907873, 0.7907874, 0.79078734, 1)
 offset_left = -1085.0
 offset_top = -1859.0
 offset_right = 6.0
 offset_bottom = 69.0
-texture = SubResource("CanvasTexture_mwb40")
+texture = ExtResource("1_eow3j")
 
 [node name="Grass01" type="Sprite2D" parent="."]
 texture_filter = 1
