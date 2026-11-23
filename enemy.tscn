@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://car6emqn7bbjm"]
+
+[ext_resource type="Script" uid="uid://iwhxxil840go" path="res://Enemy_1.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://ya28vlvg3sx3" path="res://marker_assets/enemies/enemy_05_ghost.png" id="1_7k104"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
+radius = 73.0
+height = 178.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7k104"]
+radius = 226.37358
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(559, 958)
+scale = Vector2(0.38476563, 0.38476563)
+texture = ExtResource("1_7k104")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(559, 963)
+shape = SubResource("CapsuleShape2D_4gyqm")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(563, 962)
+shape = SubResource("CircleShape2D_7k104")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_hitbox_enter"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_hitbox_exited"]

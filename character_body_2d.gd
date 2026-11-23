@@ -11,7 +11,7 @@ var death:bool = false
 
 var tm:bool = true
 
-func _takeDamage(damage: int):
+func takeDamage(damage: int):
 	if tm:
 		tm = false
 		$Hp.play()
@@ -23,7 +23,7 @@ func _pause():
 	get_tree().paused = !get_tree().paused
 
 func _physics_process(delta: float) -> void:
-	#_takeDamage(10)
+	#takeDamage(10)
 	
 	$Camera2D/CanvasLayer/Attackvalue.text = str(ATTACK)
 	$Camera2D/CanvasLayer/Defencevalue.text = str(DEFENCE)

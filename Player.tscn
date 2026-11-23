@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dw32115mkaa45" path="res://addons/pause2.png" id="4_cxr5p"]
 [ext_resource type="Texture2D" uid="uid://di55o57kaisf8" path="res://addons/pause.png" id="5_tdg3f"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
-size = Vector2(157, 156)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tdg3f"]
+radius = 68.007355
 
 [sub_resource type="LabelSettings" id="LabelSettings_kpjcp"]
 font_size = 56
@@ -35,7 +35,7 @@ scale = Vector2(0.328125, 0.328125)
 texture = ExtResource("2_kne1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_e80uo")
+shape = SubResource("CircleShape2D_tdg3f")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, -7)
