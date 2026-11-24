@@ -7,6 +7,7 @@ var count_volna_enemy:int = 5
 var tm:bool = true
 var next_volna:bool = true
 
+
 @onready var spawnpoint1 = $SpawnPoint.position
 @onready var spawnpoint2 = $SpawnPoint2.position
 @onready var spawnpoint3 = $SpawnPoint3.position

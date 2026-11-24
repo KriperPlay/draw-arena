@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="2_0428m"]
 
 [node name="About_Game" type="Node2D"]
+position = Vector2(-4, 0)
 script = ExtResource("1_u7lq8")
 
 [node name="bg" type="Sprite2D" parent="."]

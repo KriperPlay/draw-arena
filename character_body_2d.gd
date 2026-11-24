@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+var image: Image
+var draw_texture: ImageTexture
+
 var Hp: int = 100
 
 var SPEED = 600
@@ -40,6 +43,10 @@ func _pause():
 
 func _ready() -> void:
 	add_to_group("PLAYER")
+	if FileAccess.file_exists("user://my_character.png"):
+		image = Image.load_from_file("user://my_character.png")
+		draw_texture = ImageTexture.create_from_image(image)
+		$Sprite2D.texture = draw_texture
 
 func get_my_pos() -> Vector2:
 	return global_position

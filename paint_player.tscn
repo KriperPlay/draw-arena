@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://coyt4ovnbiqgk"]
+[gd_scene load_steps=6 format=3 uid="uid://coyt4ovnbiqgk"]
 
 [ext_resource type="Texture2D" uid="uid://dkxxq2ul6rme6" path="res://marker_assets/ui/Минималистичная рамка на кремовом фоне.png" id="1_nkhuf"]
+[ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="2_s1got"]
+[ext_resource type="Script" uid="uid://ckvx5wnmdas1i" path="res://paint_player.tres.gd" id="3_0ug5v"]
+[ext_resource type="Texture2D" uid="uid://co6peu6vrm81a" path="res://marker_assets/ui/btn_play.png" id="4_0ug5v"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s1got"]
 
 [node name="paint-player" type="Node2D"]
 
@@ -8,3 +13,38 @@
 position = Vector2(538.75, 963.5)
 scale = Vector2(1.1376195, 1.1656698)
 texture = ExtResource("1_nkhuf")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 265.0
+offset_top = 59.0
+offset_right = 993.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("2_s1got")
+theme_override_font_sizes/font_size = 80
+text = "Нарисуй себя"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 232.0
+offset_top = 246.0
+offset_right = 831.0
+offset_bottom = 790.0
+texture = SubResource("CanvasTexture_s1got")
+
+[node name="pain_area" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(527, 508)
+script = ExtResource("3_0ug5v")
+
+[node name="play" type="Button" parent="."]
+offset_left = 82.0
+offset_top = 1624.0
+offset_right = 990.0
+offset_bottom = 1882.0
+theme_override_fonts/font = ExtResource("2_s1got")
+theme_override_font_sizes/font_size = 100
+icon = ExtResource("4_0ug5v")
+flat = true
+
+[connection signal="pressed" from="play" to="CanvasLayer/pain_area" method="_on_play_pressed"]
