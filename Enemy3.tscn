@@ -60,6 +60,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_yot05")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

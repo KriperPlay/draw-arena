@@ -3,6 +3,7 @@ extends Node2D
 const Enemy = preload("res://enemy.tscn")
 const Enemy2 = preload("res://Enemy2.tscn")
 const Enemy3 = preload("res://Enemy3.tscn")
+const Enemy_Boss = preload("res://EnemyBoss.tscn")
 
 var enemy_count:int = 0
 var count_volna_enemy:int = 1
@@ -31,14 +32,20 @@ func spawn_enemy(pos: Vector2):
 		add_child(enemy)
 		enemy_count += 1
 		enemys.append(enemy)
-	elif rand_enemy < 40:
+	elif rand_enemy < 40 && rand_enemy > 20:
 		var enemy = Enemy3.instantiate()
 		enemy.position = pos
 		add_child(enemy)
 		enemy_count += 1
 		enemys.append(enemy)
-	else:
+	elif rand_enemy <= 20 && rand_enemy > 5:
 		var enemy = Enemy2.instantiate()
+		enemy.position = pos
+		add_child(enemy)
+		enemy_count += 1
+		enemys.append(enemy)
+	else:
+		var enemy = Enemy_Boss.instantiate()
 		enemy.position = pos
 		add_child(enemy)
 		enemy_count += 1
@@ -78,6 +85,7 @@ func volna(count: int):
 				_:
 					spawn_number_use = 1
 		count_volna_enemy += 3
+		await get_tree().create_timer(25).timeout
 		tm = true
 	
 
