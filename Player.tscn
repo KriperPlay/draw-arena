@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=12 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="AudioStream" uid="uid://cif22ypbxta2r" path="res://addons/Hp.mp3" id="2_e80uo"]
@@ -20,6 +20,8 @@ outline_color = Color(0, 0, 0, 1)
 font_size = 20
 outline_size = 9
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dtqjt"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["PLAYER"]]
 motion_mode = 1
@@ -43,28 +45,6 @@ drag_vertical_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
-[node name="Control" type="Control" parent="Camera2D/CanvasLayer"]
-process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Pause_Button" type="TextureButton" parent="Camera2D/CanvasLayer/Control"]
-modulate = Color(1, 1, 1, 0.54509807)
-layout_mode = 0
-offset_left = 912.0
-offset_top = 2.0
-offset_right = 1082.0
-offset_bottom = 172.0
-texture_normal = ExtResource("4_cxr5p")
-texture_pressed = ExtResource("5_tdg3f")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="HealthBarFull" type="ColorRect" parent="Camera2D/CanvasLayer"]
 offset_left = 10.0
 offset_top = 11.0
@@ -83,7 +63,7 @@ color = Color(1, 0.4745098, 0.4745098, 1)
 offset_left = 39.0
 offset_top = 6.0
 offset_right = 276.0
-offset_bottom = 83.0
+offset_bottom = 85.0
 theme_override_fonts/font = ExtResource("3_kne1u")
 text = "100"
 label_settings = SubResource("LabelSettings_kpjcp")
@@ -122,7 +102,7 @@ vertical_alignment = 1
 offset_left = 355.0
 offset_top = -4.0
 offset_right = 464.0
-offset_bottom = 24.0
+offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Ускорение"
 label_settings = SubResource("LabelSettings_kne1u")
@@ -196,7 +176,7 @@ vertical_alignment = 1
 offset_left = 699.0
 offset_top = -2.0
 offset_right = 779.0
-offset_bottom = 26.0
+offset_bottom = 27.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kne1u")
 text = "Атака"
@@ -209,5 +189,51 @@ offset_right = 706.0
 offset_bottom = -115.0
 joystick_mode = 0
 visibility_mode = 0
+
+[node name="pause" type="Control" parent="Camera2D/CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1082.0
+offset_bottom = 1907.0
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/CanvasLayer/pause"]
+modulate = Color(0.22155905, 0.22155884, 0.22155881, 0.5176471)
+layout_mode = 0
+offset_right = 1085.0
+offset_bottom = 1921.0
+texture = SubResource("CanvasTexture_dtqjt")
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/pause"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 869.0
+offset_right = 901.0
+offset_bottom = 1132.0
+theme_override_fonts/font = ExtResource("3_kne1u")
+theme_override_font_sizes/font_size = 100
+text = "ПАУЗА"
+
+[node name="Control" type="Control" parent="Camera2D/CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Pause_Button" type="TextureButton" parent="Camera2D/CanvasLayer/Control"]
+modulate = Color(1, 1, 1, 0.54509807)
+layout_mode = 0
+offset_left = 912.0
+offset_top = 2.0
+offset_right = 1082.0
+offset_bottom = 172.0
+texture_normal = ExtResource("4_cxr5p")
+texture_pressed = ExtResource("5_tdg3f")
+ignore_texture_size = true
+stretch_mode = 0
 
 [connection signal="pressed" from="Camera2D/CanvasLayer/Control/Pause_Button" to="." method="_pause"]

@@ -6,6 +6,7 @@ var SPEED = 600
 var USKORENIE = 1
 var ATTACK = 10
 var DEFENCE = 5
+var PAUSED = false
 
 var death:bool = false
 
@@ -21,6 +22,9 @@ func takeDamage(damage: int):
 
 func _pause():
 	get_tree().paused = !get_tree().paused
+	PAUSED = get_tree().paused 
+	if PAUSED == true: $Camera2D/CanvasLayer/pause.show()
+	else: $Camera2D/CanvasLayer/pause.hide()
 
 func _ready() -> void:
 	add_to_group("PLAYER")
