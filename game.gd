@@ -5,7 +5,7 @@ const Enemy2 = preload("res://Enemy2.tscn")
 const Enemy3 = preload("res://Enemy3.tscn")
 
 var enemy_count:int = 0
-var count_volna_enemy:int = 5
+var count_volna_enemy:int = 1
 var tm:bool = true
 var next_volna:bool = true
 
@@ -25,13 +25,13 @@ func spawn_enemy(pos: Vector2):
 	randomize()
 	var rand_enemy = randi_range(1,100)
 	
-	if rand_enemy <= 85 && rand_enemy >= 55:
+	if rand_enemy <= 85 && rand_enemy >= 40:
 		var enemy = Enemy.instantiate()
 		enemy.position = pos
 		add_child(enemy)
 		enemy_count += 1
 		enemys.append(enemy)
-	elif rand_enemy < 55:
+	elif rand_enemy < 40:
 		var enemy = Enemy3.instantiate()
 		enemy.position = pos
 		add_child(enemy)
@@ -51,6 +51,12 @@ func volna(count: int):
 		
 		tm = false
 		next_volna = false
+		
+		$CanvasLayer/CD_Volna.visible = true
+		$CanvasLayer/CD_Volna.text = "Волна начнется через 10 секунд"
+		await get_tree().create_timer(10).timeout
+		$CanvasLayer/CD_Volna.visible = false
+		
 		for i in range(count+rand_enemy_count_spawn):
 			match spawn_number_use:
 				1:
@@ -71,7 +77,6 @@ func volna(count: int):
 					spawn_number_use = 1
 				_:
 					spawn_number_use = 1
-		await get_tree().create_timer(30).timeout
 		count_volna_enemy += 3
 		tm = true
 	

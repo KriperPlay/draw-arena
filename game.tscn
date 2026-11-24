@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bkk8jlhv8co84"]
+[gd_scene load_steps=20 format=3 uid="uid://bkk8jlhv8co84"]
 
 [ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://dvdrvg08vlga5" path="res://marker_assets/grass-bg.png" id="1_eow3j"]
@@ -37,8 +37,13 @@ size = Vector2(352.34424, 266.31503)
 size = Vector2(134.25287, 156.61996)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j5wjh"]
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vef74"]
 font_size = 31
-outline_size = 4
+outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
@@ -510,12 +515,21 @@ shape = SubResource("RectangleShape2D_mfdv2")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="enemy_count" type="Label" parent="CanvasLayer"]
-offset_left = 45.0
-offset_top = 101.0
-offset_right = 394.0
-offset_bottom = 225.0
+offset_left = 22.0
+offset_top = 82.0
+offset_right = 371.0
+offset_bottom = 206.0
 text = "Enemy: 1"
 label_settings = SubResource("LabelSettings_j5wjh")
+
+[node name="CD_Volna" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 381.0
+offset_top = 78.0
+offset_right = 748.0
+offset_bottom = 122.0
+text = "Волна скоро начнется"
+label_settings = SubResource("LabelSettings_vef74")
 
 [node name="SpawnPoint" type="StaticBody2D" parent="."]
 position = Vector2(-251, 2808)
