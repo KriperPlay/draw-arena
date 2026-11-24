@@ -6,9 +6,9 @@ var draw_texture: ImageTexture
 var Hp: int = 100
 
 var SPEED = 600
-var USKORENIE = 1
-var ATTACK = 5
-var DEFENCE = 1
+var USKORENIE = Global.USKORENIE
+var ATTACK = Global.ATTACK
+var DEFENCE = Global.DEFENCE
 var PAUSED = false
 
 var death:bool = false

@@ -3,6 +3,7 @@ extends Sprite2D
 var image: Image
 var draw_texture: ImageTexture
 
+
 var brush_size := 10         # радиус кисти в пикселях
 var brush_color := Color.BLACK
 var last_pos := Vector2i(-1, -1)
