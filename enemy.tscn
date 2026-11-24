@@ -8,7 +8,7 @@ radius = 73.0
 height = 178.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7k104"]
-radius = 226.37358
+radius = 119.70798
 
 [sub_resource type="Animation" id="Animation_4gyqm"]
 length = 0.001

@@ -1,16 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://wypu0br2vri4"]
+[gd_scene load_steps=12 format=3 uid="uid://wypu0br2vri4"]
 
 [ext_resource type="Script" uid="uid://b81a3pd7npkup" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://x8mshcf4yn24" path="res://marker_assets/ui/main_menu_bg.svg" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dkxxq2ul6rme6" path="res://marker_assets/ui/Минималистичная рамка на кремовом фоне.png" id="2_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://co6peu6vrm81a" path="res://marker_assets/ui/btn_play.png" id="3_jix8l"]
 [ext_resource type="Texture2D" uid="uid://colmbjyy4xu7b" path="res://marker_assets/ui/btn_settings.png" id="4_jix8l"]
+[ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="5_j5v2v"]
+[ext_resource type="Texture2D" uid="uid://trvbbh3i2ht0" path="res://marker_assets/environment/grass_04.svg" id="6_iotk1"]
+[ext_resource type="Texture2D" uid="uid://du5bomumo4cie" path="res://marker_assets/environment/grass_03.png" id="7_w44g7"]
+[ext_resource type="Texture2D" uid="uid://c3tf3dgtyoecl" path="res://marker_assets/environment/grass_01.png" id="8_cm266"]
+[ext_resource type="Texture2D" uid="uid://h42d48sjnt7j" path="res://marker_assets/enemies/enemy_03_spiky.svg" id="9_g8g3n"]
+[ext_resource type="Texture2D" uid="uid://cisva4iyegbgc" path="res://marker_assets/enemies/enemy_04_bat.svg" id="10_8u0te"]
+[ext_resource type="Texture2D" uid="uid://0etsu62j6lf0" path="res://marker_assets/enemies/enemy_06_brute.png" id="11_oiatc"]
 
 [node name="main-menu" type="Node2D"]
 script = ExtResource("1_06t4h")
 
-[node name="MainMenuBg" type="Sprite2D" parent="."]
-position = Vector2(532, 952)
-texture = ExtResource("3_fu7sn")
+[node name="main" type="Sprite2D" parent="."]
+position = Vector2(545.75, 957.5)
+scale = Vector2(1.1631243, 1.1584928)
+texture = ExtResource("2_0k4wn")
 
 [node name="play" type="Button" parent="."]
 offset_left = 90.0
@@ -29,5 +37,39 @@ offset_right = 989.0
 offset_bottom = 1279.0
 icon = ExtResource("4_jix8l")
 flat = true
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 69.0
+offset_top = 191.0
+offset_right = 1108.0
+offset_bottom = 526.0
+theme_override_fonts/font = ExtResource("5_j5v2v")
+theme_override_font_sizes/font_size = 180
+text = "DrawArena"
+
+[node name="Grass04" type="Sprite2D" parent="."]
+position = Vector2(157, 1776)
+texture = ExtResource("6_iotk1")
+
+[node name="Grass03" type="Sprite2D" parent="."]
+position = Vector2(489, 1681)
+texture = ExtResource("7_w44g7")
+
+[node name="Grass01" type="Sprite2D" parent="."]
+position = Vector2(871, 1676)
+texture = ExtResource("8_cm266")
+
+[node name="Enemy03Spiky" type="Sprite2D" parent="."]
+position = Vector2(550, 673)
+texture = ExtResource("9_g8g3n")
+
+[node name="Enemy04Bat" type="Sprite2D" parent="."]
+position = Vector2(815, 1328)
+texture = ExtResource("10_8u0te")
+
+[node name="Enemy06Brute" type="Sprite2D" parent="."]
+position = Vector2(309, 1310)
+texture = ExtResource("11_oiatc")
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
