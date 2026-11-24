@@ -87,9 +87,19 @@ func volna(count: int):
 		count_volna_enemy += 3
 		await get_tree().create_timer(25).timeout
 		tm = true
-	
+var tm2 = true
+func DeathTp():
+	if tm2:
+		tm2 = false
+		$CanvasLayer/Death/AnimationPlayer2.play("death")
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://dead_frame.tscn")
+		tm2 = true
 
 func _process(delta: float) -> void:
+	if $player.death:
+		DeathTp()
+	
 	for i in enemys:
 		if i.health == 0:
 			i.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bkk8jlhv8co84"]
+[gd_scene load_steps=23 format=3 uid="uid://bkk8jlhv8co84"]
 
 [ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://dvdrvg08vlga5" path="res://marker_assets/grass-bg.png" id="1_eow3j"]
@@ -45,6 +45,42 @@ outline_color = Color(0, 0, 0, 1)
 font_size = 31
 outline_size = 7
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_hp6x6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.9843137, 0.96862745, 0.91764706, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3tkgg"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.93),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.9843137, 0.96862745, 0.91764706, 0), Color(0.9843137, 0.96862745, 0.91764706, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l6ohk"]
+_data = {
+&"RESET": SubResource("Animation_hp6x6"),
+&"death": SubResource("Animation_3tkgg")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_j5wjh")
@@ -530,6 +566,20 @@ offset_right = 748.0
 offset_bottom = 122.0
 text = "Волна скоро начнется"
 label_settings = SubResource("LabelSettings_vef74")
+
+[node name="Death" type="ColorRect" parent="CanvasLayer"]
+z_index = 7
+offset_left = -15.0
+offset_top = -99.0
+offset_right = 1144.0
+offset_bottom = 1961.0
+mouse_filter = 2
+color = Color(0.9843137, 0.96862745, 0.91764706, 0)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CanvasLayer/Death"]
+libraries = {
+&"": SubResource("AnimationLibrary_l6ohk")
+}
 
 [node name="SpawnPoint" type="StaticBody2D" parent="."]
 position = Vector2(-251, 2808)
