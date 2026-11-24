@@ -35,6 +35,7 @@ func lazer():
 		await get_tree().create_timer(1.5).timeout
 		lazer_active = true
 		$lazer.visible = true
+		$AnimationPlayer2.play("Lazer")
 		await get_tree().create_timer(1.5).timeout
 		tm = true
 

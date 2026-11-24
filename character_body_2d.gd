@@ -8,7 +8,7 @@ var Hp: int = 100
 var SPEED = 600
 var USKORENIE = 1
 var ATTACK = 5
-var DEFENCE = 5
+var DEFENCE = 1
 var PAUSED = false
 
 var death:bool = false

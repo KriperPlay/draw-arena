@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4y68eridfk3h"]
+[gd_scene load_steps=12 format=3 uid="uid://c4y68eridfk3h"]
 
 [ext_resource type="Script" uid="uid://cet7hjnb2uqm5" path="res://enemy_2.gd" id="1_3n2en"]
 [ext_resource type="Texture2D" uid="uid://wfnugrn6r68o" path="res://marker_assets/enemies/enemy_06_brute.svg" id="1_mym6m"]
@@ -62,6 +62,139 @@ _data = {
 &"walk": SubResource("Animation_qi2p4")
 }
 
+[sub_resource type="Animation" id="Animation_3n2en"]
+resource_name = "Lazer"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lazer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.33, 0.45, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-43, -425), Vector2(-64, -432), Vector2(-24, -423), Vector2(-55, -418), Vector2(-20, -430)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lazer/ColorRect4:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.94),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(48, 838), Vector2(70.98999, 838)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("lazer/ColorRect4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.93),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-374, 467), Vector2(-372.5, 479.7609)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("lazer/ColorRect3:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.94),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(48, 838), Vector2(68, 840.34784)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("lazer/ColorRect3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.94),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 12.652161), Vector2(10, 12.652161)]
+}
+
+[sub_resource type="Animation" id="Animation_3buae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lazer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-43, -425)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lazer/ColorRect4:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48, 838)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("lazer/ColorRect4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-374, 467)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("lazer/ColorRect3:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(48, 838)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("lazer/ColorRect3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 12.652161)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adkxb"]
+_data = {
+&"Lazer": SubResource("Animation_3n2en"),
+&"RESET": SubResource("Animation_3buae")
+}
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_3n2en")
 
@@ -110,7 +243,6 @@ offset_bottom = 445.0
 color = Color(0.90343326, 0.34708866, 0.38636696, 1)
 
 [node name="lazer2" type="ColorRect" parent="lazer"]
-z_index = 1
 layout_mode = 0
 offset_left = 480.0
 offset_top = 401.0
@@ -137,6 +269,27 @@ offset_right = 498.0
 offset_bottom = 1251.0
 rotation = 1.5707964
 color = Color(0.99295574, 0.6480219, 0.68648833, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="lazer"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 12.652161
+offset_right = 68.0
+offset_bottom = 850.65216
+
+[node name="ColorRect4" type="ColorRect" parent="lazer"]
+layout_mode = 0
+offset_left = -374.0
+offset_top = 467.0
+offset_right = -326.0
+offset_bottom = 1305.0
+rotation = -1.5707964
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_adkxb")
+}
+autoplay = "Lazer"
 
 [connection signal="body_entered" from="Area2D" to="." method="_hitbox_enter"]
 [connection signal="body_exited" from="Area2D" to="." method="_hitbox_exited"]
