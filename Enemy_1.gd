@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 	
 	if playerTargetMove != null and playerTargetMove.has_method("get_my_pos"):
 		var target_pos = playerTargetMove.get_my_pos()
-		var direction = global_position.direction_to(target_pos)
+		nav_agent.target_position = target_pos
+		var target_pos2 = nav_agent.get_next_path_position()
+		var direction = global_position.direction_to(target_pos2)
 		velocity = direction * SPEED
 		move_and_slide()
