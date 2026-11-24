@@ -111,6 +111,10 @@ shape = SubResource("CircleShape2D_tdg3f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -7)
+limit_left = -2500
+limit_top = -2500
+limit_right = 2500
+limit_bottom = 2500
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 

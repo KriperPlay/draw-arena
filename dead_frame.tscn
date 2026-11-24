@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cavqxpqmdbl10"]
+
+[ext_resource type="Script" uid="uid://cck57wl22t2k" path="res://dead_frame.gd" id="1_0uj70"]
+[ext_resource type="Texture2D" uid="uid://dkxxq2ul6rme6" path="res://marker_assets/ui/Минималистичная рамка на кремовом фоне.png" id="1_xxr3p"]
+[ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="2_0uj70"]
+[ext_resource type="Texture2D" uid="uid://2vbnukvij3kp" path="res://marker_assets/dead.png" id="3_3wnau"]
+
+[node name="dead_frame" type="Node2D"]
+script = ExtResource("1_0uj70")
+
+[node name="frame" type="Sprite2D" parent="."]
+position = Vector2(543.25, 957.5)
+scale = Vector2(1.1620617, 1.1537081)
+texture = ExtResource("1_xxr3p")
+
+[node name="Label" type="Label" parent="frame"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -344.43094
+offset_top = -654.845
+offset_right = 362.56906
+offset_bottom = -293.83508
+theme_override_fonts/font = ExtResource("2_0uj70")
+theme_override_font_sizes/font_size = 150
+text = "ТЫ УМЕР"
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(543, 826)
+scale = Vector2(1.5403225, 1.6519372)
+texture = ExtResource("3_3wnau")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 354.0
+offset_top = 1236.0
+offset_right = 772.0
+offset_bottom = 1424.0
+theme_override_fonts/font = ExtResource("2_0uj70")
+theme_override_font_sizes/font_size = 100
+text = "<<<<<"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
