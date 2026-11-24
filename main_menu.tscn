@@ -74,6 +74,7 @@ position = Vector2(309, 1310)
 texture = ExtResource("11_oiatc")
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 906.0
 offset_top = 37.0
 offset_right = 1046.0

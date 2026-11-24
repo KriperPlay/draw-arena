@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bkk8jlhv8co84"]
+[gd_scene load_steps=24 format=3 uid="uid://bkk8jlhv8co84"]
 
 [ext_resource type="PackedScene" uid="uid://cok4nrmbcj7cg" path="res://Player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://dvdrvg08vlga5" path="res://marker_assets/grass-bg.png" id="1_eow3j"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://e7d16u6hycn5" path="res://marker_assets/environment/rock_02.png" id="5_eow3j"]
 [ext_resource type="Texture2D" uid="uid://bs7gv66if0c4e" path="res://marker_assets/environment/grass_03.svg" id="6_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://cbev7art88hle" path="res://icon.svg" id="9_vef74"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vef74"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vef74"]
 vertices = PackedVector2Array(2453, 2464, 2849, 3241, 2464, 3241, 755.97656, 3112.0234, 756.21094, 2971.539, 2304, 2464, 3163.9766, -1806.0469, 3157.0078, 3783, 2827, 486, 2827, 324, 2849, 3707, -1019.03906, 3783, 2464, 3707, 2453, 2297, 2615, 486, 2304, 2297, 689, 1480, 689, 1317, 2615, 324, 1839, -441, 1839, -865, -1041.9531, -1827.9375, 1432, -865, 1432, -441, 487, 1317, 502.78906, 3111.461, 503.02344, 2970.9766, 487, 1480)
@@ -84,6 +86,13 @@ _data = {
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_j5wjh")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+offset_left = -3969.0
+offset_top = -4240.0
+offset_right = 6510.0
+offset_bottom = 6626.0
+texture = SubResource("CanvasTexture_vef74")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1091.0
