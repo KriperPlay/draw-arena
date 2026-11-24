@@ -5,6 +5,9 @@ const Enemy2 = preload("res://Enemy2.tscn")
 const Enemy3 = preload("res://Enemy3.tscn")
 const Enemy_Boss = preload("res://EnemyBoss.tscn")
 
+const Heal = preload("res://Heal.tscn")
+var heal_count = 0;
+
 var enemy_count:int = 0
 var count_volna_enemy:int = 1
 var tm:bool = true
@@ -96,7 +99,23 @@ func DeathTp():
 		get_tree().change_scene_to_file("res://dead_frame.tscn")
 		tm2 = true
 
+var tm3:bool = true
+func Heal_meth():
+	if tm3:
+		tm3 = true
+		randomize()
+		var heal = Heal.instantiate()
+		heal.position = Vector2(randf_range(-2000.0,2000.0),randf_range(-2000.0,2000.0))
+		add_child(heal)
+		heal_count += 1
+		await get_tree().create_timer(20).timeout
+		heal_count = 0
+		tm3 = false
+
 func _process(delta: float) -> void:
+	if heal_count < 4:
+		Heal_meth()
+	
 	if $player.death:
 		DeathTp()
 	
