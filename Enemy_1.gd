@@ -2,10 +2,14 @@ extends CharacterBody2D
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
-const SPEED = 300.0
+var health = 100
+var SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 var player = null
 var playerTargetMove = null
+
+func GetAttack(damage: int):
+	health -= damage
 
 func _hitbox_enter(body):
 	if body is CharacterBody2D:
@@ -22,6 +26,15 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	$HealthBar.size = Vector2(health, 10)
+	
+	if health < 50:
+		SPEED = 150.0
+		$HealthBar.color = Color("#fd8d91")
+	else:
+		SPEED = 300.0
+		$HealthBar.color = Color("#fa5567")
+		
 	if player != null:
 		randomize()
 		var random_int := randi_range(6, 10)

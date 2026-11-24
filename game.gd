@@ -12,6 +12,8 @@ var next_volna:bool = true
 @onready var spawnpoint3 = $SpawnPoint3.position
 @onready var spawnpoint4 = $SpawnPoint4.position
 
+var enemys = []
+
 var spawn_number_use = 1
 func _ready() -> void:
 	pass
@@ -21,6 +23,7 @@ func spawn_enemy(pos: Vector2):
 	enemy.position = pos
 	add_child(enemy)
 	enemy_count += 1
+	enemys.append(enemy)
 
 func volna(count: int):
 	if tm:
@@ -55,6 +58,12 @@ func volna(count: int):
 	
 
 func _process(delta: float) -> void:
+	for i in enemys:
+		if i.health == 0:
+			i.queue_free()
+			enemys.erase(i)
+			enemy_count -= 1
+	
 	$CanvasLayer/enemy_count.text = str("Enemy: ",enemy_count)
 	if enemy_count <= 0:
 		next_volna = true

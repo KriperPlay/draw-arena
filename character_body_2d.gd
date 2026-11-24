@@ -4,19 +4,31 @@ var Hp: int = 100
 
 var SPEED = 600
 var USKORENIE = 1
-var ATTACK = 10
+var ATTACK = 5
 var DEFENCE = 5
 var PAUSED = false
 
 var death:bool = false
 
 var tm:bool = true
+var tm2:bool = true
+
+var target = []
+
+func enemy_entered(body):
+	if body is CharacterBody2D:
+		if body.has_method("GetAttack"):
+			target.append(body)
+func enemy_exited(body):
+	if body is CharacterBody2D:
+		if body.has_method("GetAttack"):
+			target.erase(body)
 
 func takeDamage(damage: int):
 	if tm:
 		tm = false
 		$Hp.play()
-		Hp -= damage
+		Hp -= damage / DEFENCE
 		await get_tree().create_timer(0.69).timeout
 		tm = true
 
@@ -32,9 +44,19 @@ func _ready() -> void:
 func get_my_pos() -> Vector2:
 	return global_position
 
+func Attack():
+	if tm2:
+		tm2 = false
+		for i in target:
+			i.GetAttack(ATTACK)
+			print(i.health)
+			break
+		await get_tree().create_timer(0.2).timeout
+		tm2 = true
 
 func _physics_process(delta: float) -> void:
-	#takeDamage(10)
+	if target != null:
+		Attack()
 	
 	$Camera2D/CanvasLayer/Attackvalue.text = str(ATTACK)
 	$Camera2D/CanvasLayer/Defencevalue.text = str(DEFENCE)

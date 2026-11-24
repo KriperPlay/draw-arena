@@ -521,12 +521,14 @@ label_settings = SubResource("LabelSettings_j5wjh")
 position = Vector2(-251, 2808)
 
 [node name="Sprite2D" type="Sprite2D" parent="SpawnPoint"]
+visible = false
 texture = ExtResource("9_vef74")
 
 [node name="SpawnPoint2" type="StaticBody2D" parent="."]
 position = Vector2(2499, -582)
 
 [node name="Sprite2D" type="Sprite2D" parent="SpawnPoint2"]
+visible = false
 position = Vector2(6, -14.999996)
 scale = Vector2(0.6328125, 0.65625)
 texture = ExtResource("9_vef74")
@@ -535,6 +537,7 @@ texture = ExtResource("9_vef74")
 position = Vector2(2399, 1371)
 
 [node name="Sprite2D" type="Sprite2D" parent="SpawnPoint3"]
+visible = false
 position = Vector2(6, -14.999996)
 scale = Vector2(0.6328125, 0.65625)
 texture = ExtResource("9_vef74")
@@ -543,6 +546,7 @@ texture = ExtResource("9_vef74")
 position = Vector2(-193, -900)
 
 [node name="Sprite2D" type="Sprite2D" parent="SpawnPoint4"]
+visible = false
 position = Vector2(6, -14.999996)
 scale = Vector2(0.6328125, 0.65625)
 texture = ExtResource("9_vef74")

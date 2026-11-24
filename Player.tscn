@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cok4nrmbcj7cg"]
+[gd_scene load_steps=13 format=3 uid="uid://cok4nrmbcj7cg"]
 
 [ext_resource type="Script" uid="uid://m0t6dp3auyf4" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="AudioStream" uid="uid://cif22ypbxta2r" path="res://addons/Hp.mp3" id="2_e80uo"]
@@ -22,6 +22,9 @@ outline_size = 9
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_dtqjt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dtqjt"]
+radius = 496.68097
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["PLAYER"]]
 motion_mode = 1
@@ -236,4 +239,11 @@ texture_pressed = ExtResource("5_tdg3f")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dtqjt")
+
 [connection signal="pressed" from="Camera2D/CanvasLayer/Control/Pause_Button" to="." method="_pause"]
+[connection signal="body_entered" from="Area2D" to="." method="enemy_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="enemy_exited"]
