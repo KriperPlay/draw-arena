@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://coyt4ovnbiqgk"]
+[gd_scene load_steps=7 format=3 uid="uid://coyt4ovnbiqgk"]
 
 [ext_resource type="Texture2D" uid="uid://dkxxq2ul6rme6" path="res://marker_assets/ui/Минималистичная рамка на кремовом фоне.png" id="1_nkhuf"]
 [ext_resource type="FontFile" uid="uid://chky78myg7s7g" path="res://Comic Sans MS.ttf" id="2_s1got"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://co6peu6vrm81a" path="res://marker_assets/ui/btn_play.png" id="4_0ug5v"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_s1got"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0ug5v"]
 
 [node name="paint-player" type="Node2D"]
 
@@ -47,4 +49,64 @@ theme_override_font_sizes/font_size = 100
 icon = ExtResource("4_0ug5v")
 flat = true
 
+[node name="black" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 314.0
+offset_top = 858.0
+offset_right = 440.0
+offset_bottom = 948.0
+
+[node name="TextureRect" type="TextureRect" parent="black"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 19.0
+offset_right = 113.0
+offset_bottom = 73.0
+texture = SubResource("CanvasTexture_0ug5v")
+
+[node name="red" type="Button" parent="."]
+modulate = Color(0.64288646, 0.12881497, 0.20209393, 1)
+offset_left = 485.0
+offset_top = 858.0
+offset_right = 611.0
+offset_bottom = 948.0
+
+[node name="TextureRect" type="TextureRect" parent="red"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 19.0
+offset_right = 113.0
+offset_bottom = 73.0
+texture = SubResource("CanvasTexture_0ug5v")
+
+[node name="blue" type="Button" parent="."]
+modulate = Color(0.27942806, 0.30451977, 0.6870174, 1)
+offset_left = 652.0
+offset_top = 857.0
+offset_right = 778.0
+offset_bottom = 947.0
+
+[node name="TextureRect" type="TextureRect" parent="blue"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 19.0
+offset_right = 113.0
+offset_bottom = 73.0
+texture = SubResource("CanvasTexture_0ug5v")
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 90.0
+offset_top = 993.0
+offset_right = 1105.0
+offset_bottom = 1422.0
+theme_override_fonts/font = ExtResource("2_s1got")
+theme_override_font_sizes/font_size = 90
+text = "ЧЕРНЫЙ - сам игрок
+КРАСНЫЙ - урон
+СИНИЙ - защита"
+
 [connection signal="pressed" from="play" to="CanvasLayer/pain_area" method="_on_play_pressed"]
+[connection signal="pressed" from="black" to="CanvasLayer/pain_area" method="_on_black_pressed"]
+[connection signal="pressed" from="red" to="CanvasLayer/pain_area" method="_on_red_pressed"]
+[connection signal="pressed" from="blue" to="CanvasLayer/pain_area" method="_on_blue_pressed"]

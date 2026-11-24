@@ -69,3 +69,15 @@ func _on_play_pressed() -> void:
 	save_character()
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://game.tscn")
+
+
+func _on_red_pressed() -> void:
+	brush_color = Color.RED
+
+
+func _on_black_pressed() -> void:
+	brush_color = Color.BLACK
+
+
+func _on_blue_pressed() -> void:
+	brush_color = Color.BLUE
