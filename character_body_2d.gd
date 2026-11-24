@@ -80,4 +80,8 @@ func _physics_process(delta: float) -> void:
 	
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = direction * SPEED * USKORENIE
+	if velocity == Vector2(0,0):
+		$AnimationPlayer.play("idle")
+	else:
+		$AnimationPlayer.play("walk")
 	move_and_slide()
