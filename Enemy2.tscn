@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4y68eridfk3h"]
+
+[ext_resource type="Script" uid="uid://cet7hjnb2uqm5" path="res://enemy_2.gd" id="1_3n2en"]
+[ext_resource type="Texture2D" uid="uid://wfnugrn6r68o" path="res://marker_assets/enemies/enemy_06_brute.svg" id="1_mym6m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3n2en"]
+radius = 87.0
+height = 174.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3n2en"]
+size = Vector2(879, 85.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3buae"]
+size = Vector2(101, 890)
+
+[sub_resource type="Animation" id="Animation_4gyqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qi2p4"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.46666667, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.22514747, 0.22514747]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iifgy"]
+_data = {
+&"RESET": SubResource("Animation_4gyqm"),
+&"walk": SubResource("Animation_qi2p4")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_3n2en")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 46.66
+target_desired_distance = 30.0
+path_max_distance = 773.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.08, 1.08)
+texture = ExtResource("1_mym6m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 19)
+shape = SubResource("CapsuleShape2D_3n2en")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3.5, 20.75)
+shape = SubResource("RectangleShape2D_3n2en")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, 14)
+shape = SubResource("RectangleShape2D_3buae")
+
+[node name="HealthBar" type="ColorRect" parent="."]
+offset_left = -47.0
+offset_top = -116.0
+offset_right = 53.0
+offset_bottom = -106.0
+color = Color(0.9933619, 0.55111045, 0.57015896, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_iifgy")
+}
+autoplay = "walk"
+
+[node name="lazer" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -43.0
+offset_top = -425.0
+offset_right = 47.0
+offset_bottom = 445.0
+color = Color(0.90343326, 0.34708866, 0.38636696, 1)
+
+[node name="lazer2" type="ColorRect" parent="lazer"]
+z_index = 1
+layout_mode = 0
+offset_left = 480.0
+offset_top = 401.0
+offset_right = 570.0
+offset_bottom = 1271.0
+rotation = 1.5707964
+color = Color(0.90343326, 0.34708866, 0.38636696, 1)
+
+[node name="ColorRect" type="ColorRect" parent="lazer"]
+z_index = 1
+layout_mode = 0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 64.0
+offset_bottom = 846.0
+color = Color(0.99295574, 0.6480219, 0.68648833, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="lazer"]
+z_index = 1
+layout_mode = 0
+offset_left = 458.0
+offset_top = 423.0
+offset_right = 498.0
+offset_bottom = 1251.0
+rotation = 1.5707964
+color = Color(0.99295574, 0.6480219, 0.68648833, 1)
+
+[connection signal="body_entered" from="Area2D" to="." method="_hitbox_enter"]
+[connection signal="body_exited" from="Area2D" to="." method="_hitbox_exited"]

@@ -103,7 +103,7 @@ volume_db = -4.992
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.9999943, -1.0000076)
-scale = Vector2(0.31, 0.31)
+scale = Vector2(0.385, 0.385)
 texture = ExtResource("3_dtqjt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
