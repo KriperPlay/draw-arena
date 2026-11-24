@@ -15,6 +15,7 @@ var death:bool = false
 
 var tm:bool = true
 var tm2:bool = true
+var tm3:bool = true
 
 var target = []
 
@@ -61,6 +62,14 @@ func Attack():
 		await get_tree().create_timer(0.2).timeout
 		tm2 = true
 
+func DeathTP():
+	if tm3:
+		tm3 = false
+		$AnimationPlayer2.play("death")
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://dead_frame.tscn")
+		tm3 = true
+
 func _physics_process(delta: float) -> void:
 	if target != null:
 		Attack()
@@ -78,6 +87,8 @@ func _physics_process(delta: float) -> void:
 		Hp = 0
 		death = true
 	
+	if death:
+		DeathTP()
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = direction * SPEED * USKORENIE
 	if velocity == Vector2(0,0):
