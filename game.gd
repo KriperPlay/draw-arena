@@ -2,6 +2,7 @@ extends Node2D
 
 const Enemy = preload("res://enemy.tscn")
 const Enemy2 = preload("res://Enemy2.tscn")
+const Enemy3 = preload("res://Enemy3.tscn")
 
 var enemy_count:int = 0
 var count_volna_enemy:int = 5
@@ -24,8 +25,14 @@ func spawn_enemy(pos: Vector2):
 	randomize()
 	var rand_enemy = randi_range(1,100)
 	
-	if rand_enemy <= 75:
+	if rand_enemy <= 85 && rand_enemy >= 55:
 		var enemy = Enemy.instantiate()
+		enemy.position = pos
+		add_child(enemy)
+		enemy_count += 1
+		enemys.append(enemy)
+	elif rand_enemy < 55:
+		var enemy = Enemy3.instantiate()
 		enemy.position = pos
 		add_child(enemy)
 		enemy_count += 1
